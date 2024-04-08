@@ -1,0 +1,25 @@
+{% extends "plantillab/base.html" %}
+
+{% load static %}
+{% block content %}
+<main>
+    <div class="album py-8 bg-">
+        <div class="container" style="margin: 20px;">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-md-4 g-3">
+                {% for photo in photos %}
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <img src="{{ photo.image.url }}" alt="{{ photo.title }}" class="card-img-top img-fluid" onclick="expandImage(this)">
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</main>
+<script src="/static/js/ampliar-imagen.js"></script>
+<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+{% endblock %}

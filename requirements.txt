@@ -1,0 +1,5 @@
+Django== 4.2.9
+django-crispy-forms == 2.1
+pillow == 10.2.0
+simplejson   ==  3.19.2
+aws-lambda-wsgi   == 0.0.6

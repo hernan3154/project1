@@ -1,0 +1,302 @@
+{% extends "plantillab/base.html"%}
+
+{% load static %}
+{% block content %}
+
+<head>
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        /* Efecto hover */
+        .card-img-top {
+            transition: transform 0.2s;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .card-img-top:hover {
+            transform: scale(1.1);
+        }
+
+        .card-body {
+            background-color: #111112;
+        }
+
+        iframe {
+            width: 400px;
+            /* Ancho del reproductor al 100% del aside */
+
+            height: 752px;
+
+            /* Altura del reproductor */
+            /*border: none;*/
+            /* Elimina el borde del iframe */
+
+        }
+
+        .embed-responsive {
+            position: relative;
+            display: block;
+            width: 100%;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .embed-responsive iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .spotify-container {
+            float: right;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            max-width: 400px;
+            margin: auto;
+            /* Ancho del reproductor */
+
+            /* Color de fondo */
+            z-index: 100;
+            /* Asegura que esté por encima de otros elementos */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            margin-top: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="spotify-container"><!--reproductor de spotify-->
+        <iframe style="border-radius:12px"
+            src="https://open.spotify.com/embed/artist/1Qv4E1VgZOGnOYd99Kp5Bs?utm_source=generator" width="100%"
+            height="352" frameBorder="0" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+    </div>
+
+    <main>
+        <!--******************************-->
+        <!--tarjetas y imagenes -->
+        <div class="album py-8 bg-">
+            <div class="container" style="margin: 20px;">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-md-4 g-3">
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img las pelotas/las pelotas1.jpeg" alt="Imagen de la tarjeta"
+                                    class="card-img-top  img-fluid" onclick="expandImage(this)">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img las pelotas/las pelotas2.jpeg" alt="Imagen de la tarjeta"
+                                    class="card-img-top img-fluid" onclick="expandImage(this)">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img las pelotas/las pelotas3.jpeg" alt="Imagen de la tarjeta"
+                                    class="card-img-top h-100 w-100" onclick="expandImage(this)">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img las pelotas/las pelotas4.jpeg" alt="Imagen de la tarjeta"
+                                    class="card-img-top w-100 h-100" onclick="expandImage(this)">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img las pelotas/las pelotas5.jpeg" alt="Imagen de la tarjeta"
+                                    class="card-img-top h-100" onclick="expandImage(this)">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img las pelotas/las pelotas6.jpeg" alt="Imagen de la tarjeta"
+                                    class="card-img-top h-100" onclick="expandImage(this)">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img las pelotas/las pelotas7.jpeg" alt="Imagen de la tarjeta"
+                                    class="card-img-top h-100" onclick="expandImage(this)">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img las pelotas/las pelotas8.jpeg" alt="Imagen de la tarjeta"
+                                    class="card-img-top h-100" onclick="expandImage(this)">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img las pelotas/las pelotas9.jpeg" alt="Imagen de la tarjeta"
+                                    class="card-img-top h-100" onclick="expandImage(this)">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img las pelotas/las pelotas10.jpeg" alt="Imagen de la tarjeta"
+                                    class="card-img-top h-100" onclick="expandImage(this)">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img las pelotas/las pelotas11.jpeg" alt="Imagen de la tarjeta"
+                                    class="card-img-top h-100" onclick="expandImage(this)">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img las pelotas/las pelotas12.jpeg" alt="Imagen de la tarjeta"
+                                    class="card-img-top h-100" onclick="expandImage(this)">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img las pelotas/las pelotas13.jpeg" alt="Imagen de la tarjeta"
+                                    class="card-img-top h-100" onclick="expandImage(this)">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img las pelotas/las pelotas14.jpeg" alt="Imagen de la tarjeta"
+                                    class="card-img-top h-100" onclick="expandImage(this)">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img las pelotas/las pelotas15.jpeg" alt="Imagen de la tarjeta"
+                                    class="card-img-top h-100" onclick="expandImage(this)">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img las pelotas/las pelotas16.jpeg" alt="Imagen de la tarjeta"
+                                    class="card-img-top h-100" onclick="expandImage(this)">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img las pelotas/las pelotas17.jpeg" alt="Imagen de la tarjeta"
+                                    class="card-img-top h-100" onclick="expandImage(this)">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+    <script src="{% static 'js/manejo-botones-in-re.js'%}"></script>
+    <script src="/static/js/ampliar-imagen.js"></script>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+{% endblock %}

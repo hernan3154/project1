@@ -1,0 +1,361 @@
+{% extends "plantillab/base.html"%}
+
+{% load static %}
+{% block content %}
+
+<head>
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        /* Efecto hover */
+        .card-img-top {
+            transition: transform 0.2s;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .card-img-top:hover {
+            transform: scale(1.1);
+        }
+
+        .card-body {
+            background-color: #111112;
+        }
+
+        .spotify-container iframe {
+            max-width: 400px;
+            /* Ancho del reproductor al 100% del aside */
+
+            min-height:752px;
+
+            /* Altura del reproductor */
+            /*border: none;*/
+            /* Elimina el borde del iframe */
+
+        }
+
+        .embed-responsive {
+            position: relative;
+            display: block;
+            width: 100%;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .embed-responsive iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .spotify-container {
+            float: right;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            max-width: 400px;
+            margin: auto;
+            /* Ancho del reproductor */
+
+            /* Color de fondo */
+            z-index: 100;
+            /* Asegura que esté por encima de otros elementos */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            margin-top: 20px;    
+        }
+
+        .youtube iframe {
+            width: 400px;
+            height: 300px;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="spotify-container "><!--reproductor de spotify-->
+        <iframe style="border-radius:12px"
+            src="https://open.spotify.com/embed/artist/4ZDoy7AWNgQVmX7T0u0B1j?utm_source=generator&theme=0" width="100%"
+            height="352" frameBorder="0" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+    </div>
+
+    <main>
+        <!--******************************-->
+        <!--tarjetas y imagenes -->
+        <div class="album py-8 bg-">
+            <div class="container" style="margin: 20px;">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-md-4 g-3">
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img ntg/no te va gustar1.jfif" alt="Imagen de la tarjeta"
+                                    class="card-img-top  img-fluid" onclick="expandImage(this)">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img ntg/no te va gustar2.jfif" alt="Imagen de la tarjeta"
+                                    class="card-img-top img-fluid" onclick="expandImage(this)">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img ntg/no te va gustar3.jpg" alt="Imagen de la tarjeta"
+                                    class="card-img-top h-100 w-100" onclick="expandImage(this)">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img ntg/no te va gustar4.jpg" alt="Imagen de la tarjeta"
+                                    class="card-img-top w-100 h-100" onclick="expandImage(this)">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img ntg/no te va gustar5.jpeg" alt="Imagen de la tarjeta"
+                                    class="card-img-top h-100" onclick="expandImage(this)">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img ntg/no te va gustar6.jpeg" alt="Imagen de la tarjeta"
+                                    class="card-img-top h-100" onclick="expandImage(this)">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img ntg/no te va gustar7.jpeg" alt="Imagen de la tarjeta"
+                                    class="card-img-top h-100" onclick="expandImage(this)">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img ntg/no te va gustar8.jpeg" alt="Imagen de la tarjeta"
+                                    class="card-img-top h-100" onclick="expandImage(this)">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img ntg/no te va gustar9.jpeg" alt="Imagen de la tarjeta"
+                                    class="card-img-top h-100" onclick="expandImage(this)">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img ntg/no te va gustar10.jpeg" alt="Imagen de la tarjeta"
+                                    class="card-img-top h-100" onclick="expandImage(this)">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img ntg/no te va gustar11.jpeg" alt="Imagen de la tarjeta"
+                                    class="card-img-top h-100" onclick="expandImage(this)">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img ntg/no te va gustar12.jpeg" alt="Imagen de la tarjeta"
+                                    class="card-img-top h-100" onclick="expandImage(this)">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img ntg/no te va gustar13.jpeg" alt="Imagen de la tarjeta"
+                                    class="card-img-top h-100" onclick="expandImage(this)">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img ntg/no te va gustar14.jpeg" alt="Imagen de la tarjeta"
+                                    class="card-img-top h-100" onclick="expandImage(this)">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img ntg/no te va gustar15.jpeg" alt="Imagen de la tarjeta"
+                                    class="card-img-top h-100" onclick="expandImage(this)">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img ntg/no te va gustar16.jpeg" alt="Imagen de la tarjeta"
+                                    class="card-img-top h-100" onclick="expandImage(this)">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img ntg/no te va gustar17.jpeg" alt="Imagen de la tarjeta"
+                                    class="card-img-top h-100" onclick="expandImage(this)">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img ntg/no te va gustar18.jpeg" alt="Imagen de la tarjeta"
+                                    class="card-img-top h-100" onclick="expandImage(this)">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img ntg/no te va gustar19.jpeg" alt="Imagen de la tarjeta"
+                                    class="card-img-top h-100" onclick="expandImage(this)">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img ntg/no te va gustar20.jpeg" alt="Imagen de la tarjeta"
+                                    class="card-img-top h-100" onclick="expandImage(this)">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <img src="/static/img ntg/no te va gustar21.jpeg" alt="Imagen de la tarjeta"
+                                    class="card-img-top h-100" onclick="expandImage(this)">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        </div>
+        </div>
+    </main>
+    <br>
+    <div class="b-example-divider"></div>
+    <br>
+
+    <main class="youtube">
+        <iframe width="400" height="315" src="https://www.youtube.com/embed/66vP7Zl0ng8?si=ankWmSJupUAsRdk-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Fr6SCZ22IUw?si=Nu75UHOQmIWXtxqM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </main>
+    <script src="{% static 'js/manejo-botones-in-re.js'%}"></script>
+    <script src="/static/js/ampliar-imagen.js"></script>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+{% endblock %}
